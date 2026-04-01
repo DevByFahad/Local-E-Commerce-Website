@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkyTech Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">SkyTech</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#reviews">Reviews</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <input type="text" id="search" placeholder="Search products">
+
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Next Generation Tech Store</h1>
+
+            <p>Premium gadgets for modern lifestyle</p>
+
+            <button onclick="scrollProducts()">Shop Now</button>
+
+        </div>
+
+    </section>
+
+    <!-- FILTERS -->
+
+    <section class="filters">
+
+        <button onclick="filterProducts('all')">All</button>
+        <button onclick="filterProducts('audio')">Audio</button>
+        <button onclick="filterProducts('wearable')">Wearables</button>
+        <button onclick="filterProducts('computer')">Computers</button>
+        <button onclick="filterProducts('mobile')">Mobile</button>
+
+    </section>
+
+    <!-- PRODUCTS -->
+
+    <section class="products" id="products">
+
+        <h2>Featured Products</h2>
+
+        <div class="product-grid" id="product-grid"></div>
+
+    </section>
+
+    <!-- PRODUCT MODAL -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">×</span>
+
+            <img id="modal-img">
+
+            <h2 id="modal-title"></h2>
+
+            <p id="modal-price"></p>
+
+            <button id="modal-cart">Add To Cart</button>
+
+        </div>
+
+    </div>
+
+    <!-- CART -->
+
+    <div class="cart" id="cart">
+
+        <h2>Your Cart</h2>
+
+        <div id="cart-items"></div>
+
+        <h3>Total: $<span id="cart-total">0</span></h3>
+
+        <button onclick="checkout()">Checkout</button>
+
+    </div>
+
+    <!-- REVIEWS -->
+
+    <section class="reviews" id="reviews">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review-grid">
+
+            <div class="review">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+                <p>Excellent UI and product quality.</p>
+            </div>
+
+            <div class="review">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+                <p>My favorite tech store design.</p>
+            </div>
+
+            <div class="review">
+                ⭐ ⭐ ⭐ ⭐ ⭐
+                <p>Clean design and smooth shopping.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h3>SkyTech Store</h3>
+
+        <p>support@skytech.com</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
